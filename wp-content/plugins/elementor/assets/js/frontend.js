@@ -1,4 +1,4 @@
-/*! elementor - v2.2.2 - 16-09-2018 */
+/*! elementor - v2.2.3 - 17-09-2018 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -253,14 +253,16 @@ module.exports = ViewModule.extend({
 		};
 
 		var addIeCompatibility = function addIeCompatibility() {
-			var isIE = 'Microsoft Internet Explorer' === navigator.appName || !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g) || !!navigator.userAgent.match(/rv:11/);
+			var isIE = 'Microsoft Internet Explorer' === navigator.appName || !!navigator.userAgent.match(/Trident/g) || !!navigator.userAgent.match(/MSIE/g) || !!navigator.userAgent.match(/rv:11/),
+			    el = document.createElement('div'),
+			    supportsGrid = 'string' === typeof el.style.grid;
 
-			if (!isIE) {
+			if (!isIE && supportsGrid) {
 				return;
 			}
 			elements.$body.addClass('elementor-msie');
 
-			var msieCss = '<link rel="stylesheet" id="elementor-frontend-css-msie"  href="' + elementorFrontend.config.urls.assets + 'css/frontend-msie.min.css?' + elementorFrontend.config.version + '" type="text/css" />';
+			var msieCss = '<link rel="stylesheet" id="elementor-frontend-css-msie" href="' + elementorFrontend.config.urls.assets + 'css/frontend-msie.min.css?' + elementorFrontend.config.version + '" type="text/css" />';
 
 			elements.$body.append(msieCss);
 		};
@@ -2638,7 +2640,7 @@ module.exports = HandlerModule.extend({
 	activateDefaultTab: function activateDefaultTab() {
 		var settings = this.getSettings();
 
-		if (!settings.autoExpand || 'editor' === (settings.autoExpand && !this.isEdit)) {
+		if (!settings.autoExpand || 'editor' === settings.autoExpand && !this.isEdit) {
 			return;
 		}
 

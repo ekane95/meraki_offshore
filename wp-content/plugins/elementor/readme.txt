@@ -4,7 +4,7 @@ Tags: page builder, editor, landing page, drag-and-drop, elementor, visual edito
 Requires at least: 4.7
 Tested up to: 4.9
 Requires PHP: 5.4
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -215,6 +215,11 @@ No. Elementor supports WordPress 4.6 or greater, and is compatible with PHP 5.4 
 7. **Shape Divider.** Choose from a wide array of shape dividers and separate your sections in endless ways, that until now were simply not possible.
 
 == Changelog ==
+
+= 2.2.3 - 2018-09-17 =
+* Tweak: Improved browser compatibility with Elementor grid
+* Fix: Toggle Widget first toggle always open on load
+* Fix: Changed Dailymotion placeholder in Video widget
 
 = 2.2.2 - 2018-09-16 =
 * Tweak: Improved IE compatibility mechanism
