@@ -1,3 +1,8 @@
 meraki / x#s&ftaW9TD^jbEfHC
 
 domain / meraki-offshore.hol.es / |K$U#c&OC9S79]2ob=
+
+rewrite url
+
+//meraki-offshore.hol.es/
+u260109889\domains\meraki-offshore\public_html\
