@@ -6,3 +6,6 @@ rewrite url
 
 //meraki-offshore.hol.es
 u260109889\domains\meraki-offshore\public_html\
+
+//localhost/meraki_offshore
+C:\Bitnami\wampstack-7.1.21-0\apache2\htdocs\meraki_offshore 
